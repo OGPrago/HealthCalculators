@@ -1,5 +1,6 @@
 package com.ps;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -11,15 +12,25 @@ public class UserInterface {
     }
 
     private static void mainMenu() {
-        byte menuCommand;
+        byte menuCommand = 0;
 
         do {
             System.out.println("-----------Hello!-----------");
             System.out.println("Select a calculator: ");
             System.out.println("\t1)Calories Calculator");
             System.out.println("\t2)BMI Calculator");
+            System.out.println("\t3) Body Fat Calculator");
+            System.out.println("\t4)BMR Calculator");
+            System.out.println("\t5 Exit");
 
-            menuCommand = scanner.nextByte();
+            try {
+                menuCommand = scanner.nextByte();
+                scanner.nextLine();
+            } catch (InputMismatchException e) {
+                System.out.println("Misinput? ¬‿¬");
+                scanner.next();
+                continue;
+            }
 
             switch (menuCommand) {
                 case 1:
@@ -30,9 +41,11 @@ public class UserInterface {
                     break;
                 case 4:
                     break;
+                case 5:
+                    break;
                 default:
                     System.out.println("Command not found.");
             }
-        } while (menuCommand != 4);
+        } while (menuCommand != 5);
     }
 }
