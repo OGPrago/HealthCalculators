@@ -10,6 +10,10 @@
 - Calorie
 - Body Fat
 - Ideal Weight
+- BMR
+- Calculate in Metric Units
+- GUI
+- Tracking/Difference
 
 Calculations are based from https://www.calculator.net/fitness-and-health-calculator.html
 
