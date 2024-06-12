@@ -14,6 +14,8 @@
 - Calculate in Metric Units
 - GUI
 - Tracking/Difference
+- Saved Users
+- Guest Users
 
 Calculations are based from https://www.calculator.net/fitness-and-health-calculator.html
 
